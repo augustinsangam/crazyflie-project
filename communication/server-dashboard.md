@@ -39,7 +39,7 @@ Note : Time is in UTC format. Localisation in centimeter. Speed in meter/second.
 
 ```json
 {
-  "command":"land",
+  "type":"land",
   "data" : {
     "robotName": "robot_1"
   }
@@ -50,7 +50,7 @@ Note : Time is in UTC format. Localisation in centimeter. Speed in meter/second.
 
 ```json
 {
-  "command":"take_off",
+  "type":"take_off",
   "data":{
     "robotName":"robot_1"
   }
