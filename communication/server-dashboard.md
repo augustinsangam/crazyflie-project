@@ -16,6 +16,19 @@ In the following sections, we will describe all type of communication with some 
 This message is send to the dashboard by the server.
 
 ```json
+// Interface
+{
+  "type": "robot_update", 
+  "data": {
+    "name": string,
+    "timestamp": number,
+    "speed": number,
+    "battery"?: number,
+    "position"?: [number, number, number],
+    "flying": boolean
+  }
+}
+// Example
 {
   "type": "robot_update", 
   "data": {
@@ -24,31 +37,46 @@ This message is send to the dashboard by the server.
     "speed": 2.4,
     "battery": 93.5,
     "position": [10.0, 2.0, 5.0],
-    "is_on": true
+    "flying": true
   }
 }
 ```
 
-Note : Time is in epoch time format. Localization in centimeter. Speed in meter/second.
+Note : timestamp is in epoch time format. position in centimeter. speed in meter/second. battery in percentage.
 
 ## Type : `land`
 
 ```json
+// Interface
 {
-  "type":"land",
+  "type": "land",
   "data" : {
-    "name": "robot_1"
+    "robot_name": string
+  }
+}
+// Example
+{
+  "type": "land",
+  "data" : {
+    "robot_name": "robot_1"
   }
 }
 ```
 
 ## Type : `take_off`
-
 ```json
+// Interface
 {
-  "type":"take_off",
+  "type": "take_off",
   "data":{
-    "name":"robot_1"
+    "robot_name": string
+  }
+}
+// Example
+{
+  "type": "take_off",
+  "data":{
+    "robot_name": "robot_1"
   }
 }
 ```
