@@ -37,7 +37,7 @@ Note : Time is in epoch time format. Localization in centimeter. Speed in meter/
 {
   "type":"land",
   "data" : {
-    "robotName": "robot_1"
+    "name": "robot_1"
   }
 }
 ```
@@ -48,7 +48,7 @@ Note : Time is in epoch time format. Localization in centimeter. Speed in meter/
 {
   "type":"take_off",
   "data":{
-    "robotName":"robot_1"
+    "name":"robot_1"
   }
 }
 ```
