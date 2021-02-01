@@ -20,15 +20,11 @@ This message is send to the dashboard by the server.
   "type": "robot_update", 
   "data": {
     "name": "robot_1",
+    "timestamp": 1612108000,
     "speed": 2.4,
-    "batteryPercentage": 90,
-    "localization": {
-      "x": 10, 
-      "y": 2, 
-      "z": 15
-    },
-    "lastUpdate": 1612108000
-    "isOn": true
+    "battery": 93.5,
+    "position": [10.0, 2.0, 5.0],
+    "is_on": true
   }
 }
 ```
