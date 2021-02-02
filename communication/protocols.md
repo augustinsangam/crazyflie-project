@@ -49,14 +49,14 @@ Note : timestamp is in epoch time format. position in centimeter. speed in meter
 {
   "type": "land",
   "data" : {
-    "robot_name": string
+    "name": string
   }
 }
 // Example
 {
   "type": "land",
   "data" : {
-    "robot_name": "robot_1"
+    "name": "robot_1"
   }
 }
 ```
@@ -67,14 +67,14 @@ Note : timestamp is in epoch time format. position in centimeter. speed in meter
 {
   "type": "take_off",
   "data":{
-    "robot_name": string
+    "name": string
   }
 }
 // Example
 {
   "type": "take_off",
   "data":{
-    "robot_name": "robot_1"
+    "name": "robot_1"
   }
 }
 ```
