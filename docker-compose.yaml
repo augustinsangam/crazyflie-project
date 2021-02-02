@@ -1,13 +1,11 @@
 version: "3.3"
 services:
-  
   server:
     build: server
     ports:
       - "3995:3995"
       - "5000:5000"
-  
-      
+
   dashboard:
     build: dashboard
     ports:
