@@ -2,7 +2,7 @@
 
 All communications are made through JSON. This is the basic transfer schema.
 
-```json
+```jsonc
 {
   "type": string,
   "data"?: any
@@ -13,7 +13,7 @@ In the following sections, we will describe all type of communication with some 
 
 ## Type : `robot_update`
 
-```json
+```jsonc
 // Interface
 {
   "type": "robot_update", 
@@ -44,7 +44,7 @@ Note : timestamp is in epoch time format. position in centimeter. speed in meter
 
 ## Type : `land`
 
-```json
+```jsonc
 // Interface
 {
   "type": "land",
@@ -62,7 +62,7 @@ Note : timestamp is in epoch time format. position in centimeter. speed in meter
 ```
 
 ## Type : `take_off`
-```json
+```jsonc
 // Interface
 {
   "type": "take_off",
