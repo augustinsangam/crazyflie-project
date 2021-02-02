@@ -1,4 +1,4 @@
-# Server dashboard communication
+# Protocols
 
 All communications are made through JSON. This is the basic transfer schema.
 
@@ -12,8 +12,6 @@ All communications are made through JSON. This is the basic transfer schema.
 In the following sections, we will describe all type of communication with some examples.
 
 ## Type : `robot_update`
-
-This message is send to the dashboard by the server.
 
 ```json
 // Interface
