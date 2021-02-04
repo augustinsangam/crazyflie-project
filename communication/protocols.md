@@ -16,7 +16,7 @@ In the following sections, we will describe all type of communication with some 
 ```jsonc
 // Interface
 {
-  "type": "robot_update", 
+  "type": "pulse", 
   "data": {
     "name": string,
     "timestamp": number,
@@ -28,7 +28,7 @@ In the following sections, we will describe all type of communication with some 
 }
 // Example
 {
-  "type": "robot_update", 
+  "type": "pulse", 
   "data": {
     "name": "robot_1",
     "timestamp": 1612108000,
