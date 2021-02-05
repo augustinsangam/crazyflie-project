@@ -1,8 +1,8 @@
-# Server dashboard communication
+# Protocols
 
 All communications are made through JSON. This is the basic transfer schema.
 
-```json
+```jsonc
 {
   "type": string,
   "data"?: any
@@ -13,12 +13,10 @@ In the following sections, we will describe all type of communication with some 
 
 ## Type : `robot_update`
 
-This message is send to the dashboard by the server.
-
-```json
+```jsonc
 // Interface
 {
-  "type": "robot_update", 
+  "type": "pulse", 
   "data": {
     "name": string,
     "timestamp": number,
@@ -30,7 +28,7 @@ This message is send to the dashboard by the server.
 }
 // Example
 {
-  "type": "robot_update", 
+  "type": "pulse", 
   "data": {
     "name": "robot_1",
     "timestamp": 1612108000,
@@ -46,37 +44,37 @@ Note : timestamp is in epoch time format. position in centimeter. speed in meter
 
 ## Type : `land`
 
-```json
+```jsonc
 // Interface
 {
   "type": "land",
   "data" : {
-    "robot_name": string
+    "name": string
   }
 }
 // Example
 {
   "type": "land",
   "data" : {
-    "robot_name": "robot_1"
+    "name": "robot_1"
   }
 }
 ```
 
 ## Type : `take_off`
-```json
+```jsonc
 // Interface
 {
   "type": "take_off",
   "data":{
-    "robot_name": string
+    "name": string
   }
 }
 // Example
 {
   "type": "take_off",
   "data":{
-    "robot_name": "robot_1"
+    "name": "robot_1"
   }
 }
 ```
