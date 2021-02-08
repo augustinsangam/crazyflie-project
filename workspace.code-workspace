@@ -17,9 +17,6 @@
 		"cSpell.words": [
 			"crazyfly"
 		],
-		"files.associations": {
-			"*.tcc": "cpp"
-		},
 		"cSpell.language": "en"
 	}
 }
