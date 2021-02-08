@@ -1,4 +1,4 @@
-# Protocols
+# Communication protocols
 
 All communications are made through JSON. This is the basic transfer schema.
 
@@ -11,7 +11,7 @@ All communications are made through JSON. This is the basic transfer schema.
 
 In the following sections, we will describe all type of communication with some examples.
 
-## Type : `robot_update`
+## Type : `pulse`
 
 ```jsonc
 // Interface
@@ -33,7 +33,7 @@ In the following sections, we will describe all type of communication with some 
     "name": "robot_1",
     "timestamp": 1612108000,
     "speed": 2.4,
-    "battery": 93.5,
+    "battery": .935,
     "position": [10.0, 2.0, 5.0],
     "flying": true
   }
@@ -56,25 +56,74 @@ Note : timestamp is in epoch time format. position in centimeter. speed in meter
 {
   "type": "land",
   "data" : {
-    "name": "robot_1"
+    "name": "robotXYZ"
   }
 }
 ```
 
-## Type : `take_off`
+## Type : `takeOff`
 ```jsonc
 // Interface
 {
-  "type": "take_off",
-  "data":{
+  "type": "takeOff",
+  "data": {
     "name": string
   }
 }
 // Example
 {
-  "type": "take_off",
-  "data":{
-    "name": "robot_1"
+  "type": "takeOff",
+  "data": {
+    "name": "robotXYZ"
   }
 }
 ```
+
+## Type : `lighten`
+```jsonc
+// Interface
+{
+  "type": "lighten",
+  "data": {
+    "name": string
+  }
+}
+// Example
+{
+  "type": "lighten",
+  "data": {
+    "name": "robotXYZ"
+  }
+}
+```
+
+## Type : `darken`
+```jsonc
+// Interface
+{
+  "type": "darken",
+  "data": {
+    "name": string
+  }
+}
+// Example
+{
+  "type": "darken",
+  "data": {
+    "name": "robotXYZ"
+  }
+}
+```
+
+## Type : `startMission`
+```jsonc
+// Interface
+{
+  "type": "startMission",
+  "data": null
+}
+// Example
+{
+  "type": "startMission",
+  "data": null
+}
