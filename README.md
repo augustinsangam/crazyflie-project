@@ -12,5 +12,5 @@ Communication folder contains all the schemas used during the communication betw
 Clone the projet using :
 
 ```bash
-git clone git@gitlab.com:polytechnique-montr-al/inf3995/20211/equipe-203/crazyflie-project.git --recurse && cd crazyflie-project/dashboard && git checkout master && cd ../drone && git checkout master && cd ../server && git checkout master
+git clone git@gitlab.com:polytechnique-montr-al/inf3995/20211/equipe-203/crazyflie-project.git --recurse
 ```
