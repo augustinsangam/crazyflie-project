@@ -25,6 +25,7 @@ In the following sections, we will describe all type of communication with some 
     "position"?: [number, number, number],
     "flying"?: boolean,
     "ledOn": boolean,
+    "real": boolean
   }
 }
 // Example
@@ -38,6 +39,7 @@ In the following sections, we will describe all type of communication with some 
     "position": [10.0, 2.0, 5.0],
     "flying": true,
     "ledOn": false,
+    "real": true
   }
 }
 ```
