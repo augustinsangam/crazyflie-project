@@ -35,7 +35,7 @@ In the following sections, we will describe all type of communication with some 
     "name": "robot_1",
     "timestamp": 1612108000,
     "speed": 2.4,
-    "battery": .935,
+    "battery": 93.5,
     "position": [10.0, 2.0, 5.0],
     "flying": true,
     "ledOn": false,
