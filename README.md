@@ -51,7 +51,7 @@ You can now run the simulation with
 
 # Remove everything
 
-At the end of the simulation run `docker-compose down` command to delete all the setups including the images.
+At the end of the simulation run `docker-compose down` command to delete all the setups including the images for the station.
 
 
 
