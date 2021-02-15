@@ -3,11 +3,8 @@ services:
   server:
     build: server
     network_mode: host
-    # ports:
-    #   - "3995:3995"
-    #   - "5000:5000"
     devices:
-      - "/dev/bus/usb/001/010"
+      - "/dev/bus/usb/001/010"        #010 depending on the host run lsusb and take the crazyRadio Dongle device number
 
   dashboard:
     build: dashboard
