@@ -18,7 +18,7 @@ git clone git@gitlab.com:polytechnique-montr-al/inf3995/20211/equipe-203/crazyfl
 
 ## Requirements
 
-* Use `lsusb` to make sure you have your **Crazyradio dongle** connected to your host and copy the **Device** number.
+* Use `lsusb` command to make sure you have your **Crazyradio dongle** connected to your host and copy the **Device** number.
   Replace the device number in the `docker-compose.yaml` file.
   For example if your device number is **020**
   Replace `"/dev/bus/usb/001/010"` by `"/dev/bus/usb/001/020"`
@@ -36,13 +36,13 @@ One docker-compose `docker-compose.yaml` file is available and all the configura
 
 Use `docker-compose up` command to build and launch. It will build the images, start containers and link everything.
 
-The logs of the dashboard and the server will be available. If you don't wanna see them run `docker-compose up -d` to launch the container in the background.
+The logs of the dashboard and the server will be available. If you don't wanna see them run `docker-compose up -d` command to launch the container in the background.
 
-Note you can build the images without launching the containers by using `docker-compose build`
+Note you can build the images without launching the containers by using `docker-compose build` command.
 
 # Remove everything
 
-At the end of the simulation run `docker-compose down` to delete all the setups including the images.
+At the end of the simulation run `docker-compose down` command to delete all the setups including the images.
 
 
 
