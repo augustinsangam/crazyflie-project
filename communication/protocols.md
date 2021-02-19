@@ -131,3 +131,22 @@ Note : timestamp is in epoch time format. position in centimeter. speed in meter
   "type": "startMission",
   "data": null
 }
+```
+
+## Type : `disconnect`
+```jsonc
+// Interface
+{
+  "type": "disconnect",
+  "data": {
+    "name": string
+  }
+}
+// Example
+{
+  "type": "disconnect",
+  "data": {
+    "name": "robotXYZ"
+  }
+}
+```
