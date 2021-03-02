@@ -32,7 +32,7 @@ In the following sections, we will describe all type of communication with some 
 {
   "type": "pulse", 
   "data": {
-    "name": "robot_1",
+    "name": "robotXyz",
     "timestamp": 1612108000,
     "speed": 2.4,
     "battery": 93.5,
@@ -60,7 +60,7 @@ Note : timestamp is in epoch time format. position in centimeter. speed in meter
 {
   "type": "land",
   "data" : {
-    "name": "robotXYZ"
+    "name": "robotXyz"
   }
 }
 ```
@@ -78,7 +78,7 @@ Note : timestamp is in epoch time format. position in centimeter. speed in meter
 {
   "type": "takeOff",
   "data": {
-    "name": "robotXYZ"
+    "name": "robotXyz"
   }
 }
 ```
@@ -96,7 +96,7 @@ Note : timestamp is in epoch time format. position in centimeter. speed in meter
 {
   "type": "lighten",
   "data": {
-    "name": "robot_1"
+    "name": "robotXyz"
   }
 }
 ```
@@ -114,7 +114,7 @@ Note : timestamp is in epoch time format. position in centimeter. speed in meter
 {
   "type": "darken",
   "data": {
-    "name": "robot_1"
+    "name": "robotXyz"
   }
 }
 ```
@@ -132,16 +132,16 @@ Note : timestamp is in epoch time format. position in centimeter. speed in meter
 {
   "type": "disconnect",
   "data": {
-    "name": "robot_1"
+    "name": "robotXyz"
   }
 }
 ```
 
-## Type : `start_mission`
+## Type : `startMission`
 ```ts
 // Interface
 {
-  "type": "start_mission",
+  "type": "startMission",
   "data": {
     "type": "fake" | "argos" | "crazyradio"
   }
@@ -150,7 +150,7 @@ Note : timestamp is in epoch time format. position in centimeter. speed in meter
 {
   "type": "crazyradio",
   "data": {
-    "name": "robot_1"
+    "name": "robotXyz"
   }
 }
 ```
@@ -164,7 +164,7 @@ interface Vec2 {
 
 type MissionType = 'crazyradio' | 'argos' | 'fake';
 
-type MissionStatus = 'requested' | 'rejected' | 'in_progress' | 'failed' | 'done';
+type MissionStatus = 'requested' | 'rejected' | 'inProgress' | 'failed' | 'done';
 
 interface Mission {
   id: string;
@@ -194,14 +194,14 @@ interface Mission {
 }
 ```
 
-## Type : `mission_pulse`
+## Type : `missionPulse`
 ```ts
 interface Vec2 {
   x: number;
   y: number;
 }
 
-type MissionStatus = 'requested' | 'rejected' | 'in_progress' | 'failed' | 'done';
+type MissionStatus = 'requested' | 'rejected' | 'inProgress' | 'failed' | 'done';
 
 interface MissionPulse {
   id: string;
@@ -220,7 +220,7 @@ interface MissionPulse {
 
 // Interface
 {
-  "type": "mission_pulse";
+  "type": "missionPulse";
   "data": MissionPulse;
 }
 ```
