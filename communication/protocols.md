@@ -2,7 +2,7 @@
 
 All communications are made through JSON. This is the basic transfer schema.
 
-```jsonc
+```ts
 {
   "type": string,
   "data"?: any,
@@ -13,7 +13,7 @@ In the following sections, we will describe all type of communication with some 
 
 ## Type : `pulse`
 
-```jsonc
+```ts
 // Interface
 {
   "type": "pulse", 
@@ -48,7 +48,7 @@ Note : timestamp is in epoch time format. position in centimeter. speed in meter
 
 ## Type : `land`
 
-```jsonc
+```ts
 // Interface
 {
   "type": "land",
@@ -66,7 +66,7 @@ Note : timestamp is in epoch time format. position in centimeter. speed in meter
 ```
 
 ## Type : `takeOff`
-```jsonc
+```ts
 // Interface
 {
   "type": "takeOff",
@@ -84,7 +84,7 @@ Note : timestamp is in epoch time format. position in centimeter. speed in meter
 ```
 
 ## Type : `lighten`
-```jsonc
+```ts
 // Interface
 {
   "type": "lighten",
@@ -96,13 +96,13 @@ Note : timestamp is in epoch time format. position in centimeter. speed in meter
 {
   "type": "lighten",
   "data": {
-    "name": "robotXYZ"
+    "name": "robot_1"
   }
 }
 ```
 
 ## Type : `darken`
-```jsonc
+```ts
 // Interface
 {
   "type": "darken",
@@ -114,27 +114,13 @@ Note : timestamp is in epoch time format. position in centimeter. speed in meter
 {
   "type": "darken",
   "data": {
-    "name": "robotXYZ"
+    "name": "robot_1"
   }
-}
-```
-
-## Type : `startMission`
-```jsonc
-// Interface
-{
-  "type": "startMission",
-  "data": null
-}
-// Example
-{
-  "type": "startMission",
-  "data": null
 }
 ```
 
 ## Type : `disconnect`
-```jsonc
+```ts
 // Interface
 {
   "type": "disconnect",
@@ -146,7 +132,95 @@ Note : timestamp is in epoch time format. position in centimeter. speed in meter
 {
   "type": "disconnect",
   "data": {
-    "name": "robotXYZ"
+    "name": "robot_1"
   }
+}
+```
+
+## Type : `start_mission`
+```ts
+// Interface
+{
+  "type": "start_mission",
+  "data": {
+    "type": "fake" | "argos" | "crazyradio"
+  }
+}
+// Example
+{
+  "type": "crazyradio",
+  "data": {
+    "name": "robot_1"
+  }
+}
+```
+
+## Type : `mission`
+```ts
+interface Vec2 {
+  x: number;
+  y: number;
+}
+
+type MissionType = 'crazyradio' | 'argos' | 'fake';
+
+type MissionStatus = 'requested' | 'rejected' | 'in_progress' | 'failed' | 'done';
+
+interface Mission {
+  id: string;
+  timestamp: number;
+  type: MissionType;
+  status: MissionStatus;
+  drones: {
+    name: string;
+    color: string;
+  }[];
+  dronesPositions: {
+    droneName: string;
+    pos: Vec2;
+  }[];
+  dronesPaths: {
+    droneName: string;
+    path: Vec2[];
+  }[];
+  shapes: Vec2[][];
+  points: { droneName: string; value: Vec2 }[];
+}
+
+// Interface
+{
+  "type": "mission";
+  "data": Mission;
+}
+```
+
+## Type : `mission_pulse`
+```ts
+interface Vec2 {
+  x: number;
+  y: number;
+}
+
+type MissionStatus = 'requested' | 'rejected' | 'in_progress' | 'failed' | 'done';
+
+interface MissionPulse {
+  id: string;
+  status: MissionStatus;
+  dronesPositions: {
+    droneName: string;
+    pos: Vec2;
+  }[];
+  dronesPaths: {
+    droneName: string;
+    path: Vec2[];
+  }[];
+  shapes: Vec2[][];
+  points: { droneName: string; value: Vec2 }[];
+}
+
+// Interface
+{
+  "type": "mission_pulse";
+  "data": MissionPulse;
 }
 ```
