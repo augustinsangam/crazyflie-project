@@ -172,17 +172,14 @@ interface Mission {
   type: MissionType;
   status: MissionStatus;
   drones: {
-    name: string;
-    color: string;
-  }[];
+    [droneName: string]: string;
+  };
   dronesPositions: {
-    droneName: string;
-    pos: Vec2;
-  }[];
+    [droneName: string]: Vec2;
+  };
   dronesPaths: {
-    droneName: string;
-    path: Vec2[];
-  }[];
+    [droneName: string]: Vec2[];
+  };
   shapes: Vec2[][];
   points: { droneName: string; value: Vec2 }[];
 }
@@ -207,13 +204,8 @@ interface MissionPulse {
   id: string;
   status: MissionStatus;
   dronesPositions: {
-    droneName: string;
-    pos: Vec2;
-  }[];
-  dronesPaths: {
-    droneName: string;
-    path: Vec2[];
-  }[];
+    [droneName: string]: Vec2;
+  };
   shapes: Vec2[][];
   points: { droneName: string; value: Vec2 }[];
 }
