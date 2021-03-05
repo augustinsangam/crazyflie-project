@@ -4,3 +4,9 @@
 [submodule "server"]
 	path = server
 	url = git@gitlab.com:polytechnique-montr-al/inf3995/20211/equipe-203/server.git
+[submodule "simulation"]
+	path = simulation
+	url = git@gitlab.com:polytechnique-montr-al/inf3995/20211/equipe-203/simulation.git
+[submodule "firmware"]
+	path = firmware
+	url = git@gitlab.com:polytechnique-montr-al/inf3995/20211/equipe-203/firmware.git
