@@ -1,9 +1,9 @@
 [submodule "dashboard"]
 	path = dashboard
 	url = git@gitlab.com:polytechnique-montr-al/inf3995/20211/equipe-203/dashboard.git
-[submodule "drone"]
-	path = drone
-	url = git@gitlab.com:polytechnique-montr-al/inf3995/20211/equipe-203/drone.git
+[submodule "simulation"]
+	path = simulation
+	url = git@gitlab.com:polytechnique-montr-al/inf3995/20211/equipe-203/simulation.git
 [submodule "server"]
 	path = server
 	url = git@gitlab.com:polytechnique-montr-al/inf3995/20211/equipe-203/server.git
