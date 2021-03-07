@@ -1,0 +1,47 @@
+version: "3.7"
+services:
+  hephaestus:
+    build: firmware
+    volumes:
+      - "./firmware:/firmware:ro"
+      - "./out:/out:rw"
+  hermes:
+    build: server
+    depends_on:
+      - hephaestus
+    devices:
+      - "${CRAZYRADIO}"
+    environment:
+      - "CF2_BIN=/out/cf2.bin"
+    networks:
+      - olympus
+    ports:
+      - "5000:5000" # access from host
+    volumes:
+      - "./out:/out:ro"
+      - "./server:/server:ro"
+      - "./server/data:/build/data:rw"
+  kratos:
+    build: dashboard
+    depends_on:
+      - hermes
+    ports:
+      - "4200:4200" # access from host
+    volumes:
+      - "./dashboard:/dashboard:ro"
+  zeus:
+    build: simulation
+    depends_on:
+      - hermes
+    environment:
+      - "HOST=hermes"
+      - "QT_QPA_PLATFORM=wayland"
+      - "WAYLAND_DISPLAY=${WAYLAND_DISPLAY}"
+      - "XDG_RUNTIME_DIR=/tmp"
+    networks:
+      - olympus
+    volumes:
+      - "./simulation:/simulation:ro"
+      - "${XDG_RUNTIME_DIR}/${WAYLAND_DISPLAY}:/tmp/${WAYLAND_DISPLAY}:ro"
+networks:
+  olympus:
