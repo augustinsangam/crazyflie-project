@@ -1,0 +1,28 @@
+{
+  "folders": [
+    {
+      "path": "dashboard"
+    },
+    {
+      "path": "firmware"
+    },
+    {
+      "path": "server"
+    },
+    {
+      "path": "simulation"
+    },
+    {
+      "path": "."
+    }
+  ],
+  "settings": {
+    "editor": {
+      "formatOnSave": true,
+      "formatOnType": true,
+      "rulers": [
+        80
+      ]
+    }
+  }
+}
