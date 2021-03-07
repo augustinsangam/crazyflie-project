@@ -7,7 +7,7 @@
 			"path": "dashboard"
 		},
 		{
-			"path": "drone"
+			"path": "simulation"
 		},
 		{
 			"path": "server"
