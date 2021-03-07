@@ -41,7 +41,7 @@ services:
     networks:
       - olympus
     volumes:
-      - "./simulation:/simulation:ro"
       - "${XDG_RUNTIME_DIR}/${WAYLAND_DISPLAY}:/tmp/${WAYLAND_DISPLAY}:ro"
+      - "./simulation:/simulation:ro"
 networks:
   olympus:
