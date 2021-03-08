@@ -3,6 +3,7 @@ services:
   hephaestus:
     build: firmware
     volumes:
+      - "./.git:/.git:ro"
       - "./firmware:/firmware:ro"
       - "./out:/out:rw"
   hermes:
