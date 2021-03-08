@@ -1,12 +1,16 @@
 [submodule "dashboard"]
+	branch = master
 	path = dashboard
 	url = git@gitlab.com:polytechnique-montr-al/inf3995/20211/equipe-203/dashboard.git
 [submodule "server"]
+	branch = master
 	path = server
 	url = git@gitlab.com:polytechnique-montr-al/inf3995/20211/equipe-203/server.git
 [submodule "simulation"]
+	branch = master
 	path = simulation
 	url = git@gitlab.com:polytechnique-montr-al/inf3995/20211/equipe-203/simulation.git
 [submodule "firmware"]
+	branch = master
 	path = firmware
 	url = git@gitlab.com:polytechnique-montr-al/inf3995/20211/equipe-203/firmware.git
