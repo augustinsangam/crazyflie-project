@@ -17,6 +17,13 @@
 		"cSpell.words": [
 			"crazyfly"
 		],
-		"cSpell.language": "en,fr"
+		"cSpell.language": "en,fr",
+		"editor": {
+			"formatOnSave": true,
+			"formatOnType": true,
+			"rulers": [
+				80
+			]
+		}
 	}
 }
