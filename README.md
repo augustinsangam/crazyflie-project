@@ -29,6 +29,6 @@ We have everything in the Docker images. You need to build them and launch the c
 
 One docker-compose `docker-compose.yml` file is available and all the configurations are done for you.
 
-You MUST be on a wayland environment before continuing (e.g. GNOME on Wayland). If it’s not available, install and run `weston`.
+> Note : You MUST be on a wayland environment before continuing (e.g. GNOME on Wayland). If it’s not available, install and run `weston` (`apt-get install weston`).
 
 Use `./launch.sh` command to build and launch the servers and the dashboard. It will build the images, start containers and link everything.
