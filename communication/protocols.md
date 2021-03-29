@@ -23,6 +23,7 @@ In the following sections, we will describe all type of communication with some 
     "speed": number,
     "battery"?: number,
     "position"?: [number, number, number],
+    "ranges": [number, number, number, number],
     "flying"?: boolean,
     "ledOn": boolean,
     "real": boolean
@@ -37,6 +38,7 @@ In the following sections, we will describe all type of communication with some 
     "speed": 2.4,
     "battery": 93.5,
     "position": [10.0, 2.0, 5.0],
+    "ranges": [f, l, b, r]
     "flying": true,
     "ledOn": false,
     "real": true
