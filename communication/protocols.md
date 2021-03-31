@@ -121,6 +121,24 @@ Note : timestamp is in epoch time format. position in centimeter. speed in meter
 }
 ```
 
+## Type : `returnToBase`
+```ts
+// Interface
+{
+  "type": "returnToBase",
+  "data": {
+    "name": string
+  }
+}
+// Example
+{
+  "type": "returnToBase",
+  "data": {
+    "name": "robotXyz"
+  }
+}
+```
+
 ## Type : `disconnect`
 ```ts
 // Interface
