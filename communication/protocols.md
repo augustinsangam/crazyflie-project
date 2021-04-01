@@ -211,13 +211,15 @@ Note : timestamp is in epoch time format. position in centimeter. speed in meter
   "type": "loadProjectLog",
   "data": {
     "log" : string;
+    "type" : "info" | "error" | "success";
   }
 }
 // Example
 {
   "type": "loadProjectLog",
   "data": {
-    "log" : "Flashing drone #1";
+    "log" : "Flashing drone #1",
+    "type" : "info"
   }
 }
 ```
