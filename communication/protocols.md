@@ -177,6 +177,51 @@ Note : timestamp is in epoch time format. position in centimeter. speed in meter
 }
 ```
 
+## Type : `loadProject`
+```ts
+// Interface
+{
+  "type": "loadProject",
+  "data": {
+    "type": "cdr" | "rr" | "sandbox",
+    "code"?: string
+  }
+}
+// Example 1
+{
+  "type": "loadProject",
+  "data": {
+    "type": "cdr"
+  }
+}
+// Example 2
+{
+  "type": "loadProject",
+  "data": {
+    "type": "sandbox",
+    "code": "#include <iostream>\nint main() {\n\treturn 0;\n}\n",
+  }
+}
+```
+
+## Type : `loadProjectLog`
+```ts
+// Interface
+{
+  "type": "loadProjectLog",
+  "data": {
+    "log" : string;
+  }
+}
+// Example
+{
+  "type": "loadProjectLog",
+  "data": {
+    "log" : "Flashing drone #1";
+  }
+}
+```
+
 ## Type : `mission`
 ```ts
 interface Vec2 {
