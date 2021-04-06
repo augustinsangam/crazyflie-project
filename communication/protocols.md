@@ -20,14 +20,14 @@ In the following sections, we will describe all type of communication with some 
   "data": {
     "name": string,
     "timestamp": number,
-    "speed": number,
+    "speed"?: number,
     "battery"?: number,
     "position"?: [number, number, number],
     "yaw"?: number,
-    "ranges": [number, number, number, number],
-    "flying"?: boolean,
-    "ledOn": boolean,
-    "real": boolean
+    "ranges"?: [number, number, number, number],
+    "state"?: "onTheGround" | "takingOff" | "landing" | "crashed" | "exploring" | "returningToBase",
+    "ledOn"?: boolean,
+    "real"?: boolean
   }
 }
 // Example
@@ -41,7 +41,7 @@ In the following sections, we will describe all type of communication with some 
     "position": [10.0, 2.0, 5.0],
     "yaw": 0.4905,
     "ranges": [f, l, b, r]
-    "flying": true,
+    "state": "exploring",
     "ledOn": false,
     "real": true
   }
@@ -173,6 +173,24 @@ Note : timestamp is in epoch time format. position in centimeter. speed in meter
   "type": "crazyradio",
   "data": {
     "name": "robotXyz"
+  }
+}
+```
+
+## Type : `stopMission`
+```ts
+// Interface
+{
+  "type": "stopMission",
+  "data": {
+    "id": string
+  }
+}
+// Example
+{
+  "type": "stopMission",
+  "data": {
+    "id": "mission0"
   }
 }
 ```
