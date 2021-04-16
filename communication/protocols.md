@@ -25,7 +25,7 @@ In the following sections, we will describe all type of communication with some 
     "position"?: [number, number, number],
     "yaw"?: number,
     "ranges"?: [number, number, number, number],
-    "state"?: "onTheGround" | "takingOff" | "landing" | "crashed" | "exploring" | "returningToBase",
+    "state"?: "onTheGround" | "takingOff" | "landing" | "crashed" | "exploring" | "standBy" | "returningToBase",
     "ledOn"?: boolean,
     "real"?: boolean
   }
@@ -161,18 +161,28 @@ Note : timestamp is in epoch time format. position in centimeter. speed in meter
 
 ## Type : `startMission`
 ```ts
+// Vec2 is defined in `mission` section
 // Interface
 {
   "type": "startMission",
   "data": {
-    "type": "fake" | "argos" | "crazyradio"
+    "type": "fake" | "argos" | "crazyradio",
+    "dronesPositions"?: {
+      [droneName: string]: Vec2;
+    };
   }
 }
 // Example
 {
   "type": "crazyradio",
   "data": {
-    "name": "robotXyz"
+    "name": "robotXyz",
+    "dronesPositions": {
+      "Drone #1": {
+        x: 0.5,
+        y: 0.5,
+      }
+    }
   }
 }
 ```
