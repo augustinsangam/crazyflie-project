@@ -14,3 +14,7 @@
 	branch = master
 	path = firmware
 	url = git@gitlab.com:polytechnique-montr-al/inf3995/20211/equipe-203/firmware.git
+[submodule "exploration"]
+	branch = master
+	path = exploration
+	url = git@gitlab.com:polytechnique-montr-al/inf3995/20211/equipe-203/exploration.git
