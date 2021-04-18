@@ -6,6 +6,12 @@
 		{
 			"path": "dashboard"
 		},
+    {
+			"path": "exploration"
+		},
+    {
+			"path": "firmware"
+		},
 		{
 			"path": "simulation"
 		},
