@@ -239,7 +239,8 @@ Note : timestamp is in epoch time format. position in centimeter. speed in meter
   "type": "loadProjectLog",
   "data": {
     "log" : string;
-    "type" : "info" | "error" | "success";
+    "timestamp": number;
+    "type" : "info" | "error" | "success" | "warning";
   }
 }
 // Example
@@ -247,6 +248,7 @@ Note : timestamp is in epoch time format. position in centimeter. speed in meter
   "type": "loadProjectLog",
   "data": {
     "log" : "Flashing drone #1",
+    "timestamp" : 123456964,
     "type" : "info"
   }
 }
