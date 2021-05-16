@@ -1,6 +1,6 @@
 # Crazyfly Project
 
-This repo is the entry point of the Crazyflie Project. This repo contains 3 sub-repos :
+This repo is the entry point of the Crazyflie Project. This repo contains 4 important sub-repos :
 * dashboard: Angular Web based project to control the drones.
 * firmware: Embedded firmware of the Crazyflie 2 drone.
 * server: Python Flask based server to link the dashboard and the drones.
@@ -19,9 +19,6 @@ git clone --recurse git@gitlab.com:polytechnique-montr-al/inf3995/20211/equipe-2
 ## Requirements
 
 * Use `lsusb` command to make sure you have your **Crazyradio PA** connected to your host.
-
-* Your **Crazyflie 2.X** must be in bootloader mode.
-  Press the On/Off button on the crazyflie for 3 seconds to enter Bootloader mode. The two blue LEDs will blink.
 
 ## Build and launch everything
 
