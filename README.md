@@ -1,6 +1,6 @@
 # Crazyfly Project
 
-This repo is the entry point of the Crazyflie Project. This repo contains 3 sub-repos :
+This repo is the entry point of the Crazyflie Project. This repo contains 4 important sub-repos :
 * dashboard: Angular Web based project to control the drones.
 * firmware: Embedded firmware of the Crazyflie 2 drone.
 * server: Python Flask based server to link the dashboard and the drones.
