@@ -20,9 +20,6 @@ git clone --recurse git@gitlab.com:polytechnique-montr-al/inf3995/20211/equipe-2
 
 * Use `lsusb` command to make sure you have your **Crazyradio PA** connected to your host.
 
-* Your **Crazyflie 2.X** must be in bootloader mode.
-  Press the On/Off button on the crazyflie for 3 seconds to enter Bootloader mode. The two blue LEDs will blink.
-
 ## Build and launch everything
 
 We have everything in the Docker images. You need to build them and launch the containers.
